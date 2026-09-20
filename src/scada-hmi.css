@@ -1,0 +1,278 @@
+:root {
+    /*--vjs-shmi-bg:#c8c8c8;*/
+    --vjs-shmi-bg:#4e4a4a;
+    --vjs-shmi-node-bg:#636363;
+    --vjs-shmi-text-hl:#ececec;
+    --vjs-grid-lines-color:#807575;
+
+    --vjs-shmi-hl:#afc1d4;
+    --vjs-shmi-hover: #cdbaba;
+
+    --vjs-resize-handle-color: var(--vjs-shmi-hl);
+    --vjs-resize-handle-fill-color: var(--vjs-shmi-hl);
+    --vjs-resize-frame-line-width:3px;
+    --vjs-resize-rotate-leader-width:3px;
+    --vjs-edge-handle-bg:var(--vjs-shmi-hl);
+    --vjs-edge-handle-hover-bg:var(--vjs-shmi-hover);
+
+    --vjs-shmi-default:#A9A9A9;
+
+    --vjs-shmi-disabled:#616161;
+    --vjs-shmi-stopped:#9E9E9E;
+    --vjs-shmi-running:#2E7D32;
+
+    /* --- ALARMS --- */
+    --vjs-shmi-low:#1976D2;
+    --vjs-shmi-medium:#FBC02D;
+    --vjs-shmi-high:#F57C00;
+    --vjs-shmi-critical:#D32F2F;
+
+
+}
+
+.vjs-shmi-container {
+    width:100%;
+    height:800px;
+    outline:1px solid;
+    display:flex;
+}
+
+.vjs-surface {
+    width:100%;
+    height:100%;
+    background-color: var(--vjs-shmi-bg);
+}
+
+/* background-color: #242424; Match the diagram background to "break" the line */
+/*
+
+.pneumatic-overlay {
+
+    padding: 0 3px;
+    transform: rotate(15deg);
+    color: white;
+    z-index: 1;
+}*/
+
+/*.vjs-connector-path {
+    stroke:var(--vjs-shmi-default);
+}*/
+
+/* ------------------------ INSPECTOR ----------------------------------------- */
+
+.vjs-inspector-pane {
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+    width: 250px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: white;
+    padding: 15px;
+}
+
+.vjs-inspector-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.vjs-inspector-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.vjs-inspector-header .close-button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.vjs-inspector-header .close-button:hover {
+    opacity: 1;
+}
+
+.vjs-inspector-properties {
+    display: flex;
+    flex-direction: column;
+}
+
+.vjs-inspector-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.vjs-inspector-property-label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.vjs-inspector-field input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 6px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.vjs-inspector-field input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.vjs-field-desc {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 2px;
+}
+
+
+.vjs-palette {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    max-height: calc(100% - 40px);
+    overflow-y: auto;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 15px !important;
+    color: var(--vjs-shmi-default);
+}
+
+.vjs-shape-library-palette-set-title {
+    background-color: transparent !important;
+    color:var(--vjs-shmi-text-hl);
+    font-weight: bold;
+}
+
+
+.vjs-shape-library-palette-shape svg {
+    fill: var(--vjs-shmi-default);;
+    stroke: var(--vjs-shmi-default);
+}
+
+[data-vjs-bg] {
+    fill:var(--vjs-shmi-node-bg);
+}
+
+.vjs-drag-active [data-vjs-bg] {
+    fill:#5999d2ab;
+}
+
+.vjs-drag-hover [data-vjs-bg] {
+    fill:#1d619ef7;
+}
+
+.vjs-inspector input[type='color'] {
+    height: 40px;
+}
+
+.vjs-inspector-field {
+    margin:0.5rem 0;
+}
+
+.vjs-edge-type-picker:not(.vjs-edge-type-picker-selected) >div:hover {
+    background-color: var(--vjs-shmi-hl);
+    opacity: 0.9;
+}
+
+.vjs-edge-type-picker-selected {
+    background-color: var(--vjs-shmi-hl);
+}
+
+
+.vjs-radio-group label {
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    margin:0.25rem 0;
+    color: #d4d4d4;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.vjs-inspector-field .vjs-radio-group  input {
+    width:auto;
+    margin-right:0.5rem;
+    margin-top: -1px;
+}
+
+
+
+.vjs-controls {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    padding: 7px;
+    color: white;
+    top: 0.5rem;
+    border-radius: 5px;
+    left: 1rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.vjs-export-controls {
+    left:12rem;
+}
+
+.vjs-controls i {
+    background-color: var(--vjs-shmi-default);
+    color: white;
+}
+
+.vjs-overlay text {
+    fill:#a9a9a9;
+}
+
+/* ----------------- ALARMS --------------------------------- */
+
+[data-alarm='Critical'] :is(path,rect,circle) {
+    stroke:var(--vjs-shmi-critical) !important;
+}
+
+[data-alarm='High'] :is(path,rect,circle) {
+    stroke:var(--vjs-shmi-high) !important;
+}
+
+[data-alarm='Medium'] :is(path,rect,circle) {
+    stroke:var(--vjs-shmi-medium) !important;
+}
+
+[data-alarm='Low'] :is(path,rect,circle) {
+    stroke:var(--vjs-shmi-low) !important;
+}
+
+/* ----------------- / ALARMS --------------------------------- */
+
+@keyframes dashdraw {
+    0% {
+        stroke-dashoffset:10;
+    }
+}
+
+.data-link-edge {
+    stroke-dasharray:5;
+    animation: dashdraw .5s linear infinite;
+}

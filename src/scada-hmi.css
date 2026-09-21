@@ -1,19 +1,10 @@
 :root {
-    /*--vjs-shmi-bg:#c8c8c8;*/
     --vjs-shmi-bg:#4e4a4a;
     --vjs-shmi-node-bg:#636363;
     --vjs-shmi-text-hl:#ececec;
-    --vjs-grid-lines-color:#807575;
 
     --vjs-shmi-hl:#afc1d4;
     --vjs-shmi-hover: #cdbaba;
-
-    --vjs-resize-handle-color: var(--vjs-shmi-hl);
-    --vjs-resize-handle-fill-color: var(--vjs-shmi-hl);
-    --vjs-resize-frame-line-width:3px;
-    --vjs-resize-rotate-leader-width:3px;
-    --vjs-edge-handle-bg:var(--vjs-shmi-hl);
-    --vjs-edge-handle-hover-bg:var(--vjs-shmi-hover);
 
     --vjs-shmi-default:#A9A9A9;
 
@@ -35,6 +26,13 @@
     height:800px;
     outline:1px solid;
     display:flex;
+    --vjs-grid-lines-color:#807575;
+    --vjs-resize-handle-color: var(--vjs-shmi-hl);
+    --vjs-resize-handle-fill-color: var(--vjs-shmi-hl);
+    --vjs-resize-frame-line-width:3px;
+    --vjs-resize-rotate-leader-width:3px;
+    --vjs-edge-handle-bg:var(--vjs-shmi-hl);
+    --vjs-edge-handle-hover-bg:var(--vjs-shmi-hover);
 }
 
 .vjs-surface {
@@ -43,20 +41,6 @@
     background-color: var(--vjs-shmi-bg);
 }
 
-/* background-color: #242424; Match the diagram background to "break" the line */
-/*
-
-.pneumatic-overlay {
-
-    padding: 0 3px;
-    transform: rotate(15deg);
-    color: white;
-    z-index: 1;
-}*/
-
-/*.vjs-connector-path {
-    stroke:var(--vjs-shmi-default);
-}*/
 
 /* ------------------------ INSPECTOR ----------------------------------------- */
 

@@ -1,7 +1,17 @@
+# SCADA/HMI
+
+This application provides a professional, modern, SCADA/HMI starter app.
+
+https://visuallyjs.com/demonstrations/scada-hmi
+
+![SCADA/HMI editor screenshot](https://static.visuallyjs.com/img/app-card/scada-hmi-2400.png)
+
+
 ## HMI ISA-101 Standard
 
-https://hmilibrary.com/standards/isa-101
+The design of this app is in accordance with the HMI ISA-101 standard
 
+https://hmilibrary.com/standards/isa-101
 
 ### Color usage
 
